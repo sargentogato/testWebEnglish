@@ -1,0 +1,63 @@
+Html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --width-profile: 100%;
+  --width-english: 0;
+  --width-gramma: 0;
+  --width-grammaAdvanced: 0;
+  --transition-width: flex-basis 3s;
+  --transition-img: width 3s;
+}
+
+.main {
+  display: flex;
+  gap: 1rem;
+}
+
+.card__profile,
+.card__english,
+.card__gramma,
+.card__gramma-advanced {
+  flex-grow: 1;
+  min-height: 100vh;
+
+  transition-timing-function: ease-out;
+  transition: var(--transition-width);
+}
+
+.card__profile {
+  flex-basis: var(--width-profile);
+  background-color: yellow;
+}
+
+.card__english {
+  flex-basis: var(--width-english);
+  background-color: violet;
+}
+
+.card__english img {
+  width: var(--width-english);
+  transition: width 3s;
+}
+
+.card__gramma {
+  flex-basis: var(--width-gramma);
+  background-color: tomato;
+}
+
+.card__gramma-advanced {
+  flex-basis: var(--width-grammaAdvanced);
+  background-color: turquoise;
+}
