@@ -7,27 +7,54 @@ const grammaAdvanced = document.getElementById("grammaAdvanced")
 
 let sectionsWeb = [profile, english, gramma, grammaAdvanced]
 
+const profileColor = "#FFFEF6"
+const englishColor = "#EFE9E7"
+const grammaColor = "#F5F1F8"
+const grammaAdvancedColor = "#111111"
+const colorTextWhite = "#ffffff"
+const colorTextBlack = "#000000"
+
+/************ Get Device to adapta de website ******************/
+
+const getDeviceType = () => {
+  const ua = navigator.userAgent
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+    // console.log("tablet")
+    return "tablet"
+  }
+  if (/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+    // console.log("mobile")
+    return "mobile"
+  }
+  // console.log("Descktop")
+  return "desktop"
+}
+
 main.addEventListener("click", (element) => {
   const elementTrigger = element.target.id
   const elementToChange = element.target
   switch (elementTrigger) {
     case "profile":
       setStyle(elementTrigger)
+      changeBackground(profileColor, colorTextBlack)
       hideVerticalTitle(elementToChange)
       showsCourse(elementToChange)
       break
     case "english":
       setStyle(elementTrigger)
+      changeBackground(englishColor, colorTextBlack)
       hideVerticalTitle(elementToChange)
       showsCourse(elementToChange)
       break
     case "gramma":
       setStyle(elementTrigger)
+      changeBackground(grammaColor, colorTextBlack)
       hideVerticalTitle(elementToChange)
       showsCourse(elementToChange)
       break
     case "grammaAdvanced":
       setStyle(elementTrigger)
+      changeBackground(grammaAdvancedColor, colorTextWhite)
       hideVerticalTitle(elementToChange)
       showsCourse(elementToChange)
       break
@@ -50,6 +77,15 @@ function resetStyle() {
   english.style.setProperty("--width-english", "0")
   gramma.style.setProperty("--width-gramma", "0")
   grammaAdvanced.style.setProperty("--width-grammaAdvanced", "0")
+}
+
+function changeBackground(color, colorText) {
+  main.style.setProperty("--background-general-color", `${color}`)
+  changeColorText(colorText)
+}
+
+function changeColorText(colorText) {
+  main.style.setProperty("--text-general-color", `${colorText}`)
 }
 
 function hideVerticalTitle(element) {
@@ -102,20 +138,6 @@ function addVerticalTextClass() {
       iterator.classList.add("vertical-text")
     }
   }
-}
-
-const getDeviceType = () => {
-  const ua = navigator.userAgent
-  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-    // console.log("tablet")
-    return "tablet"
-  }
-  if (/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-    // console.log("mobile")
-    return "mobile"
-  }
-  // console.log("Descktop")
-  return "desktop"
 }
 
 addEventListener("load", () => {
