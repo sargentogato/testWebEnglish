@@ -35,6 +35,10 @@ img {
   height: auto;
 }
 
+.profile > img {
+  width: 20%;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -151,7 +155,7 @@ footer > p {
 
   .vertical-text {
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
   .page__profile {
