@@ -13,7 +13,8 @@ Html {
 }
 
 :root {
-  --background-color-general: #fffef6;
+  --background-general-color: #fffef6;
+  --text-general-color: #000000;
   --width-profile: 100%;
   --width-english: 0;
   --width-gramma: 0;
@@ -124,7 +125,8 @@ footer > p {
   .main {
     display: flex;
     flex-direction: row;
-    background-color: var(--background-color-general);
+    background-color: var(--background-general-color);
+    color: var(--text-general-color);
   }
 
   .page__profile,
@@ -134,7 +136,7 @@ footer > p {
     align-self: start;
     width: 0;
     min-height: 100vh;
-    border: 1px solid black;
+    border: 1px solid var(--text-general-color);
 
     transition: var(--transition-width);
     transition-delay: 0.2s;
