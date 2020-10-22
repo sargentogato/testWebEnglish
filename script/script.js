@@ -74,10 +74,9 @@ function showsCourse(element) {
 }
 
 function hideCourseInfo() {
-  profile.lastElementChild.classList.remove("course")
-  english.lastElementChild.classList.remove("course")
-  gramma.lastElementChild.classList.remove("course")
-  grammaAdvanced.lastElementChild.classList.remove("course")
+  for (const iterator of sectionsWeb) {
+    iterator.lastElementChild.classList.remove("course")
+  }
 }
 
 function removeInfoCourse(element) {
@@ -93,7 +92,6 @@ function addCourseHidded() {
 }
 
 function removeVerticalTextClass(elementToChange) {
-  console.log("ESTE:", elementToChange)
   addVerticalTextClass()
   elementToChange.classList.remove("vertical-text")
 }
@@ -105,13 +103,3 @@ function addVerticalTextClass() {
     }
   }
 }
-// function addVerticalTextClass() {
-//   for (const iterator of sectionsWeb) {
-//     console.log()
-//     if (iterator.id !== "profile") {
-//       if (!iterator.classList.contains("vertical-text")) {
-//         iterator.classList.add("vertical-text")
-//       }
-//     }
-//   }
-// }
