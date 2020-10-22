@@ -35,129 +35,131 @@ img {
   display: none;
 }
 
-.main {
-  display: flex;
-  background-color: var(--background-color-general);
-}
+@media (min-width: 920px) {
+  .main {
+    display: flex;
+    background-color: var(--background-color-general);
+  }
 
-.page__profile,
-.page__english,
-.page__gramma,
-.page__gramma-advanced {
-  min-height: 100vh;
-  border: 1px solid black;
+  .page__profile,
+  .page__english,
+  .page__gramma,
+  .page__gramma-advanced {
+    min-height: 100vh;
+    border: 1px solid black;
 
-  transition: var(--transition-width);
-  transition-delay: 0.2s;
-  transition-timing-function: cubic-bezier(0.3, 1, 0, 0.9);
-}
+    transition: var(--transition-width);
+    transition-delay: 0.2s;
+    transition-timing-function: cubic-bezier(0.3, 1, 0, 0.9);
+  }
 
-.vertical-text {
-  flex-direction: column;
-  justify-content: end;
-}
+  .vertical-text {
+    flex-direction: column;
+    justify-content: end;
+  }
 
-.page__profile {
-  display: flex;
-  min-width: 5rem;
-}
+  .page__profile {
+    display: flex;
+    min-width: 5rem;
+  }
 
-.profile {
-  display: flex;
-  margin: 0 5em 0 5em;
-  align-items: center;
-}
+  .profile {
+    display: flex;
+    margin: 0 5em 0 5em;
+    align-items: center;
+  }
 
-.page__english {
-  display: flex;
-  min-width: 5rem;
-}
+  .page__english {
+    display: flex;
+    min-width: 5rem;
+  }
 
-.page__gramma {
-  display: flex;
-  min-width: 5rem;
-}
+  .page__gramma {
+    display: flex;
+    min-width: 5rem;
+  }
 
-.page__gramma-advanced {
-  display: flex;
-  min-width: 5rem;
-}
+  .page__gramma-advanced {
+    display: flex;
+    min-width: 5rem;
+  }
 
-.course__hidded {
-  display: none;
-}
+  .course__hidded {
+    display: none;
+  }
 
-.course__hidded > img {
-  display: none;
-}
+  .course__hidded > img {
+    display: none;
+  }
 
-.course {
-  display: flex;
-  margin: 0 5em 0 5em;
-  align-items: center;
-}
+  .course {
+    display: flex;
+    margin: 0 5em 0 5em;
+    align-items: center;
+  }
 
-.course__info {
-  display: flex;
-  justify-content: space-between;
-}
+  .course__info {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.course__info {
-  display: flex;
-  flex-direction: column;
-  margin-right: 2em;
-}
+  .course__info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+  }
 
-.course__info-title,
-.course__info-subtitle,
-.course__info-time {
-  margin-bottom: var(--line-height);
-}
+  .course__info-title,
+  .course__info-subtitle,
+  .course__info-time {
+    margin-bottom: var(--line-height);
+  }
 
-.page__profile {
-  flex-basis: var(--width-profile);
-  /* background-color: yellow; */
-}
+  .page__profile {
+    flex-basis: var(--width-profile);
+    /* background-color: yellow; */
+  }
 
-.page__profile > p,
-.page__english > p,
-.page__gramma > p {
-  transform-origin: left bottom;
-  transform: rotate(-90deg) translate(var(--titles-vertical-align), var(--titles-horizontal-align));
-}
+  .page__profile > p,
+  .page__english > p,
+  .page__gramma > p {
+    transform-origin: left bottom;
+    transform: rotate(-90deg) translate(var(--titles-vertical-align), var(--titles-horizontal-align));
+  }
 
-.page__english {
-  flex-basis: var(--width-english);
-  /* background-color: violet; */
-}
+  .page__english {
+    flex-basis: var(--width-english);
+    /* background-color: violet; */
+  }
 
-.page__english img {
-  width: var(--width-english);
-  transition: width 3s;
-}
+  .page__english img {
+    width: var(--width-english);
+    transition: width 3s;
+  }
 
-.page__gramma {
-  flex-basis: var(--width-gramma);
-  /* background-color: tomato; */
-}
+  .page__gramma {
+    flex-basis: var(--width-gramma);
+    /* background-color: tomato; */
+  }
 
-.page__gramma img {
-  width: var(--width-gramma);
-  transition: width 3s;
-}
+  .page__gramma img {
+    width: var(--width-gramma);
+    transition: width 3s;
+  }
 
-.page__gramma-advanced {
-  flex-basis: var(--width-grammaAdvanced);
-  /* background-color: turquoise; */
-}
+  .page__gramma-advanced {
+    flex-basis: var(--width-grammaAdvanced);
+    /* background-color: turquoise; */
+  }
 
-.page__gramma-advanced > p {
-  transform-origin: left bottom;
-  transform: rotate(-90deg) translate(var(--titles-vertical-align), 4rem);
-  white-space: nowrap;
-}
+  .page__gramma-advanced > p {
+    transform-origin: left bottom;
+    transform: rotate(-90deg) translate(var(--titles-vertical-align), 4rem);
+    white-space: nowrap;
+  }
 
-.page__gramma-advanced img {
-  width: var(--width-grammaAdvanced);
-  transition: width 3s;
+  .page__gramma-advanced img {
+    width: var(--width-grammaAdvanced);
+    transition: width 3s;
+  }
 }
