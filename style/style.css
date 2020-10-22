@@ -48,7 +48,8 @@ img {
   display: none;
 }
 
-.profile {
+.profile,
+.mobile {
   display: flex;
   flex-direction: column;
   width: 100%;
