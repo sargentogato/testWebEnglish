@@ -103,3 +103,28 @@ function addVerticalTextClass() {
     }
   }
 }
+
+const getDeviceType = () => {
+  const ua = navigator.userAgent
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+    // console.log("tablet")
+    return "tablet"
+  }
+  if (/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+    // console.log("mobile")
+    return "mobile"
+  }
+  // console.log("Descktop")
+  return "desktop"
+}
+
+addEventListener("load", () => {
+  getDeviceType()
+  if (getDeviceType() !== "desktop") {
+    for (const iterator of sectionsWeb) {
+      if (iterator.id !== "profile") {
+        iterator.lastElementChild.classList.add("mobile")
+      }
+    }
+  }
+})
