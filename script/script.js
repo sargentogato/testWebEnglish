@@ -141,10 +141,14 @@ function addVerticalTextClass() {
 }
 
 addEventListener("load", () => {
+  console.log("LEIDA")
   getDeviceType()
   if (getDeviceType() !== "desktop") {
+    console.log("1er IF")
     for (const iterator of sectionsWeb) {
+      console.log("LOOP")
       if (iterator.id !== "profile") {
+        console.log("LAST IF")
         iterator.lastElementChild.classList.add("mobile")
       }
     }
