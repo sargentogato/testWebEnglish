@@ -14,6 +14,10 @@ const grammaAdvancedColor = "#111111"
 const colorTextWhite = "#ffffff"
 const colorTextBlack = "#000000"
 
+/************ Screen adapter************************************/
+let vh = window.innerHeight * 0.01
+document.documentElement.style.setProperty("--vh", `${vh}px`)
+
 /************ Get Device to adapta de website ******************/
 
 const getDeviceType = () => {
@@ -64,16 +68,16 @@ main.addEventListener("click", (element) => {
 function setStyle(element) {
   resetStyle()
 
-  const cssVariable = `--width-${element}`
+  const cssVariable = `--size-${element}`
   const elementToChange = document.getElementById(`${element}`)
   elementToChange.style.setProperty(`${cssVariable}`, "100%")
 }
 
 function resetStyle() {
-  profile.style.setProperty("--width-profile", "0")
-  english.style.setProperty("--width-english", "0")
-  gramma.style.setProperty("--width-gramma", "0")
-  grammaAdvanced.style.setProperty("--width-grammaAdvanced", "0")
+  profile.style.setProperty("--size-profile", "0")
+  english.style.setProperty("--size-english", "0")
+  gramma.style.setProperty("--size-gramma", "0")
+  grammaAdvanced.style.setProperty("--size-grammaAdvanced", "0")
 }
 
 function changeBackground(color, colorText) {
@@ -138,7 +142,6 @@ function addVerticalTextClass() {
 }
 
 addEventListener("load", () => {
-  console.log("LEIDA")
   getDeviceType()
   if (getDeviceType() !== "desktop") {
     for (const iterator of sectionsWeb) {
