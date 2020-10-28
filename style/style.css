@@ -27,6 +27,9 @@ Html {
   --titles-horizontal-align: 3rem;
   --vh: 0;
 
+  --font-size-general: 2vh;
+  --font-size-576: 2.5vh;
+  --font-size-768: 3vh;
   --line-height: 0.5em;
 }
 
@@ -93,9 +96,9 @@ img {
 .page__gramma-advanced {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
   min-height: 3rem;
+  align-items: center;
   text-align: center;
   border-top: 1px solid black;
 }
@@ -135,10 +138,67 @@ img {
   flex-direction: column;
   width: 90%;
   gap: 0.5em;
-  font-size: 2vh;
+  text-align: left;
+  font-size: var(--font-size-general);
 }
 
-@media (min-width: 1250px) {
+/******************************************576*******************************/
+@media (min-width: 576px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile > img {
+    width: 15%;
+    height: auto;
+  }
+
+  .page__profile > .course {
+    margin-top: 1rem;
+  }
+
+  .course {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .course__info {
+    font-size: var(--font-size-576);
+  }
+
+  .mobile > img {
+    margin-left: 1rem;
+  }
+}
+
+/******************************************768*******************************/
+@media (min-width: 768px) {
+  img {
+    width: 80%;
+  }
+
+  .profile {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .profile > .course__info {
+    margin-right: 1rem;
+  }
+  .profile > img {
+    margin-left: 1rem;
+  }
+
+  .course__info {
+    font-size: var(--font-size-768);
+  }
+}
+
+/******************************************1200*******************************/
+@media (min-width: 1200px) {
   .hideVerticalTitle {
     display: none;
   }
