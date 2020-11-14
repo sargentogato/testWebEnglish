@@ -26,11 +26,11 @@ window.addEventListener("resize", () => {
 /************ Get Device to adapta de website ******************/
 
 const getDeviceType = () => {
-  const ua = navigator.userAgent
-  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+  const device = navigator.userAgent
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(device)) {
     return "tablet"
   }
-  if (/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+  if (/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(device)) {
     return "mobile"
   }
   return "desktop"
