@@ -30,6 +30,7 @@ Html {
   --font-size-general: 2vh;
   --font-size-576: 2.5vh;
   --font-size-768: 2vh;
+  --font-size-landscape: 2.6vh;
   --line-height: 0.5em;
 }
 
@@ -48,8 +49,8 @@ img {
 .page__profile {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: var(--size-profile);
-  padding-top: 1rem;
   min-height: 3rem;
 }
 
@@ -142,7 +143,7 @@ img {
   font-size: var(--font-size-general);
 }
 
-@media screen and (orientation: landscape) {
+/* @media screen and (orientation: landscape) {
   .profile {
     flex-direction: row;
     gap: 1rem;
@@ -151,17 +152,51 @@ img {
   .profile > img {
     margin-left: 1rem;
   }
+} */
+
+/******************************************Landascape min 375*******************************/
+@media screen and (min-device-width: 375px) and (orientation: landscape) {
+  .mobile > img {
+    width: 55%;
+    height: auto;
+  }
+
+  .mobile {
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0 1rem 0 1rem;
+  }
+
+  .profile > img {
+    width: 15%;
+    height: auto;
+  }
+
+  .course__info {
+    font-size: var(--font-size-landscape);
+  }
+}
+
+/******************************************Landascape min 800 iPhone X*******************************/
+@media screen and (min-device-width: 800px) and (orientation: landscape) {
+  .mobile > img {
+    width: 40%;
+  }
 }
 
 /******************************************576*******************************/
-@media (min-width: 576px) {
+@media (min-width: 576px) and (orientation: portrait) {
+  body {
+    background-color: blueviolet;
+  }
+
   img {
     width: 80%;
     height: auto;
   }
 
   .profile > img {
-    width: 15%;
+    width: 40%;
     height: auto;
   }
 
@@ -186,7 +221,7 @@ img {
 }
 
 /******************************************768*******************************/
-@media (min-width: 768px) {
+@media (min-width: 768px) and (orientation: portrait) {
   img {
     width: 80%;
   }
