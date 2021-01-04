@@ -147,6 +147,7 @@ function addVerticalTextClass() {
 }
 
 addEventListener("load", () => {
+  main.removeEventListener(click)
   getDeviceType()
   if (getDeviceType() !== "desktop") {
     for (const iterator of sectionsWeb) {
